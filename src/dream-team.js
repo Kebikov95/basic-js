@@ -4,11 +4,10 @@ module.exports = function createDreamTeam(array) {
     return false;
   }
 
-  let str = array.reduce( function(s, i) {
+  let str = array.reduce( function(s, name) {
 
-    if(typeof i == "string") s = s + i.trim()[0];
-    return s;
+    if(typeof name == "string") s = s + name.trim()[0];
+    return s.split('').sort().join('').toUpperCase();
   }, "");
-  str = str.split('').sort().join('').toUpperCase();
-  return str.split('').sort().join('').toUpperCase();
+  return str = str.split('').sort().join('').toUpperCase();
 };
